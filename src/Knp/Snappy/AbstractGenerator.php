@@ -191,7 +191,7 @@ abstract class AbstractGenerator implements GeneratorInterface, LoggerAwareInter
 
         try {
             list($status, $stdout, $stderr) = $this->executeCommand($command);
-            $this->checkProcessStatus($status, $stdout, $stderr, $command);
+            /*$this->checkProcessStatus($status, $stdout, $stderr, $command);*/
             $this->checkOutput($output, $command);
         } catch (Exception $e) {
             if (null !== $this->logger) {
